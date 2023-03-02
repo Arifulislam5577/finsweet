@@ -22,7 +22,7 @@ const HeroArea = () => {
                   placeholder="Enter Your Email Id"
                   className="bg-lightGray py-3 px-4 placeholder:text-gray focus:outline-none w-3/4 placeholder:lg:text-base placeholder:text-sm"
                 />
-                <button className="lg:w-1/4 w-2/4 block py-3  bg-blue text-white px-6 text-sm lg:text-base">
+                <button className="lg:w-1/4 w-2/4 block py-3  bg-blue hover:bg-deepBlue transition-all duration-200 text-white px-6 text-sm lg:text-base">
                   Subscribe
                 </button>
               </div>
