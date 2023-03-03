@@ -1,14 +1,18 @@
 import React from "react";
+import BlogArea from "./components/BlogArea";
 import EpisodeArea from "./components/EpisodeArea";
 import HeroArea from "./components/HeroArea";
+import PodcastArea from "./components/PodcastArea";
 import SponsorArea from "./components/SponsorArea";
 
 const HomePage = () => {
   return (
     <section>
       <HeroArea />
-      <SponsorArea />
+      <PodcastArea />
       <EpisodeArea />
+      <BlogArea />
+      <SponsorArea />
     </section>
   );
 };
