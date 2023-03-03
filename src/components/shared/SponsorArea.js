@@ -5,7 +5,7 @@ const SponsorArea = () => {
     <div className="translate-y-20">
       <div className="container">
         <div className="p-10 bg-blue">
-          <h2 className="font-bold text-3xl text-white md:text-center text-left mb-5">
+          <h2 className="font-bold text-3xl text-white md:text-center text-left mb-8">
             Our Sponsors
           </h2>
 

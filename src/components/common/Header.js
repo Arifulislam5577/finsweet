@@ -1,7 +1,17 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+  const [showNav, setShowNav] = useState(false);
+  const location = useLocation();
+  useEffect(() => {
+    setShowNav(false);
+  }, [location.pathname]);
+
+  showNav &&
+    window.addEventListener("scroll", () => {
+      setShowNav(false);
+    });
   return (
     <header className="py-5">
       <div className="container">
@@ -14,7 +24,7 @@ const Header = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_1107_2726)">
+              <g clipPath="url(#clip0_1107_2726)">
                 <path
                   d="M129.77 20.1089V23.326H127.071C124.191 23.2354 122.652 21.6804 122.652 18.7595V11.412H120.768V8.58987H122.652V5.43038H126.635V8.55696H129.679V11.3709H126.635V18.3646C126.635 19.3108 126.824 20.0677 128.28 20.0677L129.77 20.1089Z"
                   fill="#111111"
@@ -59,10 +69,91 @@ const Header = () => {
               </defs>
             </svg>
           </Link>
+          <ul className="md:flex hidden items-center justify-between gap-5">
+            <li>
+              <NavLink to="/" className="font-normal text-black">
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/podcast" className="font-normal text-black">
+                Podcast
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/podcast" className="font-normal text-black">
+                Host
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/about" className="font-normal text-black">
+                About
+              </NavLink>
+            </li>
+          </ul>
 
-          <NavLink to="/about" className="font-normal text-black">
-            About
-          </NavLink>
+          <button
+            onClick={() => setShowNav(!showNav)}
+            className="md:hidden block"
+          >
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 56 56"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.112549"
+                y="0.35498"
+                width="55.1775"
+                height="55.1775"
+                rx="6.26959"
+                fill="#FFFFFF"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M15.16 19.1648C15.16 17.0869 16.8445 15.4024 18.9224 15.4024H22.6848C24.7627 15.4024 26.4472 17.0869 26.4472 19.1648V22.9272C26.4472 25.0051 24.7627 26.6896 22.6848 26.6896H18.9224C16.8445 26.6896 15.16 25.0051 15.16 22.9272V19.1648ZM18.9224 17.9107C18.2298 17.9107 17.6683 18.4722 17.6683 19.1648V22.9272C17.6683 23.6199 18.2298 24.1813 18.9224 24.1813H22.6848C23.3774 24.1813 23.9389 23.6199 23.9389 22.9272V19.1648C23.9389 18.4722 23.3774 17.9107 22.6848 17.9107H18.9224ZM28.9554 19.1648C28.9554 17.0869 30.6399 15.4024 32.7178 15.4024H36.4802C38.5581 15.4024 40.2426 17.0869 40.2426 19.1648V22.9272C40.2426 25.0051 38.5581 26.6896 36.4802 26.6896H32.7178C30.6399 26.6896 28.9554 25.0051 28.9554 22.9272V19.1648ZM32.7178 17.9107C32.0252 17.9107 31.4637 18.4722 31.4637 19.1648V22.9272C31.4637 23.6199 32.0252 24.1813 32.7178 24.1813H36.4802C37.1729 24.1813 37.7343 23.6199 37.7343 22.9272V19.1648C37.7343 18.4722 37.1729 17.9107 36.4802 17.9107H32.7178ZM15.16 32.9603C15.16 30.8823 16.8445 29.1979 18.9224 29.1979H22.6848C24.7627 29.1979 26.4472 30.8823 26.4472 32.9603V36.7226C26.4472 38.8006 24.7627 40.485 22.6848 40.485H18.9224C16.8445 40.485 15.16 38.8006 15.16 36.7226V32.9603ZM18.9224 31.7061C18.2298 31.7061 17.6683 32.2676 17.6683 32.9603V36.7226C17.6683 37.4153 18.2298 37.9768 18.9224 37.9768H22.6848C23.3774 37.9768 23.9389 37.4153 23.9389 36.7226V32.9603C23.9389 32.2676 23.3774 31.7061 22.6848 31.7061H18.9224ZM28.9554 32.9603C28.9554 30.8823 30.6399 29.1979 32.7178 29.1979H36.4802C38.5581 29.1979 40.2426 30.8823 40.2426 32.9603V36.7226C40.2426 38.8006 38.5581 40.485 36.4802 40.485H32.7178C30.6399 40.485 28.9554 38.8006 28.9554 36.7226V32.9603ZM32.7178 31.7061C32.0252 31.7061 31.4637 32.2676 31.4637 32.9603V36.7226C31.4637 37.4153 32.0252 37.9768 32.7178 37.9768H36.4802C37.1729 37.9768 37.7343 37.4153 37.7343 36.7226V32.9603C37.7343 32.2676 37.1729 31.7061 36.4802 31.7061H32.7178Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+
+          <div
+            className={`text-white md:hidden text-base w-full md:w-2/5 bg-black h-full top-0 right-0 z-10 flex-col flex items-center justify-center  gap-5 fixed ${
+              showNav ? "translate-x-0" : "translate-x-full"
+            } duration-300 transition-all`}
+          >
+            <button
+              className="absolute top-10 left-10"
+              onClick={() => setShowNav(!showNav)}
+            >
+              Go Back
+            </button>
+            <ul className="flex flex-col items-center justify-between gap-5">
+              <li>
+                <NavLink to="/" className="font-normal text-white">
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/podcast" className="font-normal text-white">
+                  Podcast
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/host" className="font-normal text-white">
+                  Host
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className="font-normal text-white">
+                  About
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>

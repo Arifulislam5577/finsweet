@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Blog = ({ blog }) => {
   const { coverPhoto, title, description } = blog;
   return (
-    <div className="lg:col-span-1 w-full">
+    <div className="md:col-span-1 w-full">
       <div className="blog-post">
         <div>
           <img src={coverPhoto} alt={title} className="h-full w-full" />

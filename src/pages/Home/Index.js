@@ -3,7 +3,7 @@ import BlogArea from "./components/BlogArea";
 import EpisodeArea from "./components/EpisodeArea";
 import HeroArea from "./components/HeroArea";
 import PodcastArea from "./components/PodcastArea";
-import SponsorArea from "./components/SponsorArea";
+import SponsorArea from "../../components/shared/SponsorArea";
 
 const HomePage = () => {
   return (

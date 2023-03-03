@@ -2,11 +2,11 @@ import React from "react";
 
 const HeroArea = () => {
   return (
-    <div className="hero-area lg:py-20 py-10">
+    <div className="hero-area md:py-20 py-10">
       <div className="container">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-5">
-          <div className="lg:col-span-1 w-full text-left  flex flex-col items-start gap-5 lg:p-10 p-5 order-2 lg:order-1">
-            <h1 className="font-bold lg:text-5xl text-3xl text-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-5">
+          <div className="md:col-span-1 w-full text-left  flex flex-col items-start gap-5 md:p-0 lg:p-10 p-5 order-2 md:order-1">
+            <h1 className="font-bold lg:text-5xl md:text-4xl text-3xl text-black">
               Become The Hero Of Your Own Story
             </h1>
             <p className="font-normal text-base text-black">
@@ -28,7 +28,7 @@ const HeroArea = () => {
               </div>
             </form>
           </div>
-          <div className="lg:col-span-1 w-full flex items-center justify-center p-10 order-1 lg:order-2">
+          <div className="md:col-span-1 w-full flex items-center justify-center p-5 md:p-0 lg:p-5 order-1 md:order-2">
             <img src="/images/hero.svg" alt="hero" className="w-full h-full" />
           </div>
         </div>

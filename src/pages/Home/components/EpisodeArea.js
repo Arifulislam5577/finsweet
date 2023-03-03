@@ -6,7 +6,7 @@ const EpisodeArea = () => {
   return (
     <div className="episode-area py-5">
       <div className="container">
-        <div className="flex lg:flex-row flex-col lg:items-end items-start gap-5 lg:gap-0 justify-between">
+        <div className="flex md:flex-row flex-col md:items-end items-start gap-5 lg:gap-0 justify-between">
           <div>
             <h2 className="font-bold text-3xl text-black mb-3">
               Recent Episodes
@@ -22,7 +22,7 @@ const EpisodeArea = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-center justify-between my-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 items-center justify-between my-10">
           {podcast.map((episode) => (
             <Podcast key={episode.id} podcast={episode} />
           ))}

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Podcast = ({ podcast }) => {
   const { coverPhoto, title, description } = podcast;
   return (
-    <div className="lg:col-span-1 w-full">
+    <div className="md:col-span-1 w-full">
       <div className="podcast-episode">
         <div className="relative z-0">
           <img src={coverPhoto} alt={title} className="h-full w-full" />
@@ -31,7 +31,7 @@ const Podcast = ({ podcast }) => {
 
           <Link
             to="/"
-            className="flex items-center text-blue gap-2 text-base font-semibold hover:text-deepBlue duration-200 transition-all"
+            className="flex items-center text-blue gap-3 text-base font-semibold hover:text-deepBlue duration-200 transition-all"
           >
             <span className="bg-current p-3 h-10 w-10 rounded-full flex items-center justify-center">
               <svg
