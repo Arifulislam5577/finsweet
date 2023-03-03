@@ -71,21 +71,6 @@ const Header = () => {
           </Link>
           <ul className="md:flex hidden items-center justify-between gap-5">
             <li>
-              <NavLink to="/" className="font-normal text-black">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/podcast" className="font-normal text-black">
-                Podcast
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/podcast" className="font-normal text-black">
-                Host
-              </NavLink>
-            </li>
-            <li>
               <NavLink to="/about" className="font-normal text-black">
                 About
               </NavLink>
@@ -121,7 +106,7 @@ const Header = () => {
           </button>
 
           <div
-            className={`text-white md:hidden text-base w-full md:w-2/5 bg-black h-full top-0 right-0 z-10 flex-col flex items-center justify-center  gap-5 fixed ${
+            className={`text-white md:hidden text-base w-full md:w-2/5 bg-blue h-full top-0 right-0 z-10 flex-col flex items-center justify-center  gap-5 fixed ${
               showNav ? "translate-x-0" : "translate-x-full"
             } duration-300 transition-all`}
           >
